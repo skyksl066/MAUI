@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <x:String x:Key="SubTitle">System Info.</x:String>
+    <x:Double x:Key="H1">32</x:Double>
+    <x:Double x:Key="Normal">20</x:Double>
+    <Color x:Key="ForeColor">DarkBlue</Color>
+    <Color x:Key="BackColor">LightBlue</Color>
+    <Style TargetType="Label">
+        <Setter Property="TextColor" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource Normal}"></Setter>
+    </Style>
+    <Style x:Key="Header" TargetType="Label">
+        <Setter Property="Background" Value="{StaticResource BackColor}"></Setter>
+        <Setter Property="TextColor" Value="{StaticResource ForeColor}"></Setter>
+        <Setter Property="FontSize" Value="{StaticResource H1}"></Setter>
+    </Style>
+</ResourceDictionary>

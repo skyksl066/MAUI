@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
+             Title=".NET MAUI vs XAML"
+             x:Class="mod02.MainPage">
+    <StackLayout>
+        <Label Style="{StaticResource Header}" Text="{StaticResource SubTitle}"/>
+        <Label Text="{x:Static Member=sys:Environment.MachineName}"/>
+        <Label>
+            <Label.Text>
+                <x:Static Member="sys:Environment.UserName"/>
+            </Label.Text>
+        </Label>
+        <Button FontSize="{StaticResource Normal}" Text="取得OS版本資訊!" Clicked="Button_GetOSVersion"></Button>
+        <Label x:Name="LblOSVersion"></Label>
+        <Label Text="{OnPlatform WinUI='WinUI', iOS='iOS', Android='Android', Default='Default'}"/>
+        <Label Text="{OnIdiom Default='Default', Tablet='Tablet', Phone='Phone', Desktop='Desktop', TV='TV'}"/>
+    </StackLayout>
+
+</ContentPage>
