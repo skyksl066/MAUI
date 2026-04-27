@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="mod03.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:mod03"
+    xmlns:pages="clr-namespace:mod03.Pages"
+    Shell.FlyoutBehavior="Flyout"
+    Title="mod03">
+
+    <Shell.FlyoutHeader>
+        <Grid>
+            <Image Source="dotnet_bot.png"></Image>        
+        </Grid>
+    </Shell.FlyoutHeader>
+    <Shell.FlyoutFooter>
+        <Grid HorizontalOptions="Center">
+            <Label Text="Footer" FontSize="20"></Label>
+        </Grid>
+    </Shell.FlyoutFooter>
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="Root">
+        <ShellContent
+            Title="Home" Icon="house_solid.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        
+        <ShellContent
+            Title="ShopPage" Icon="cart_shopping_solid.png"
+            ContentTemplate="{DataTemplate pages:ShopPage}"
+            Route="ShopPage" />
+        
+        <ShellContent
+            Title="SettingPage" Icon="gear_solid.png"
+            ContentTemplate="{DataTemplate pages:SettingPage}"
+            Route="SettingPage" />
+
+        <ShellContent
+            Title="ProfilePage" Icon="address_card_solid.png"
+            ContentTemplate="{DataTemplate pages:ProfilePage}"
+            Route="ProfilePage" />
+        
+    </FlyoutItem>
+
+    <!--<TabBar Route="Root">
+        <ShellContent
+            Title="Home" Icon="house_solid.png"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        <ShellContent
+            Title="ShopPage" Icon="cart_shopping_solid.png"
+            ContentTemplate="{DataTemplate pages:ShopPage}"
+            Route="ShopPage" />
+        <Tab Title="SettingPage" Icon="gear_solid.png">
+            <ShellContent
+                Title="SettingPage" Icon="gear_solid.png"
+                ContentTemplate="{DataTemplate pages:SettingPage}"
+                Route="SettingPage" />
+
+            <ShellContent
+                Title="ProfilePage" Icon="address_card_solid.png"
+                ContentTemplate="{DataTemplate pages:ProfilePage}"
+                Route="ProfilePage" />
+        </Tab>
+    </TabBar>-->
+    
+</Shell>
