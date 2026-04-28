@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="mod05.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:mod05.Views"
+    xmlns:local="clr-namespace:mod05"
+    Shell.FlyoutBehavior="Disabled"
+    Title="mod05">
+
+    <TabBar>
+        <ShellContent
+             Title="Home"
+             ContentTemplate="{DataTemplate local:MainPage}"
+             Route="MainPage" />
+        <ShellContent
+             Title="BoxViewAndImage"
+             ContentTemplate="{DataTemplate views:BoxViewAndImage}"
+             Route="BoxViewAndImage" />
+        <ShellContent
+            Title="ScrollViewInGrid"
+            ContentTemplate="{DataTemplate views:ScrollViewInGrid}"
+            Route="ScrollViewInGrid" />
+        <ShellContent
+            Title="UseBorder"
+            ContentTemplate="{DataTemplate views:UseBorder}"
+            Route="UseBorder" />
+        <ShellContent
+            Title="UseBorderWithLineJoin"
+            ContentTemplate="{DataTemplate views:UseBorderWithLineJoin}"
+            Route="UseBorderWithLineJoin" />
+        <ShellContent
+            Title="UseBorderWithDash"
+            ContentTemplate="{DataTemplate views:UseBorderWithDash}"
+            Route="UseBorderWithDash" />
+        <ShellContent
+            Title="UseGradientBrush"
+            ContentTemplate="{DataTemplate views:UseGradientBrush}"
+            Route="UseGradientBrush" />
+        <ShellContent
+            Title="SplashPage"
+            ContentTemplate="{DataTemplate views:SplashPage}"
+            Route="SplashPage" />
+    </TabBar>
+
+</Shell>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod06.Views.UseDateTimePicker"
+             Title="UseDateTimePicker">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label  Text="選擇日期:"  />
+            <DatePicker x:Name="date1" Format="yyyy-MM-dd" ></DatePicker>
+            <TimePicker x:Name="time1" Format="hh:mm"  ></TimePicker>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

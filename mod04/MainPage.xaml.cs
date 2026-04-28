@@ -20,7 +20,7 @@
             
             SemanticScreenReader.Announce(CounterBtn.Text);
 
-            Application app = App.Current;
+            var app = App.Current;
             if (app is App app1)
             {
                 var window = app.Windows[0];

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod06.Views.UseEditor"
+             Title="UseEditor">
+    <VerticalStackLayout>
+        <VerticalStackLayout>
+            <Entry x:Name="userName" Placeholder="輸入你的名字" 
+     ClearButtonVisibility="WhileEditing" ReturnType="Done"
+     TextChanged="userName_TextChanged" Completed="userName_Completed" ></Entry>
+            <Label x:Name="lblOld"></Label>
+            <Label x:Name="lblNew"></Label>
+            <Label x:Name="lblCompleted"></Label>
+            <Entry x:Name="password" Placeholder="輸入密碼" IsPassword="True" ></Entry>
+            <Entry x:Name="telephone" Placeholder="輸入手機號碼" Keyboard="Telephone"></Entry>
+            <Editor x:Name="note" AutoSize="TextChanges" Placeholder="備註事項" ></Editor>
+            <Button x:Name="btnSend" Text="Send" Clicked="btnSend_Clicked"></Button>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

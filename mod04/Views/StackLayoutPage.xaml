@@ -3,13 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod04.Views.StackLayoutPage"
              Title="StackLayoutPage">
-    <StackLayout Spacing="5" Orientation="Horizontal">
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Red" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Orange"/>
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Yellow" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Green" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="blue" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Indigo" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Purple" />
+    
+        <StackLayout x:Name="stack1" Spacing="5" Orientation="Horizontal">
+            <Button x:Name="btnChangeLayout" Clicked="btnChangeLayout_Clicked" 
+                Text="Change LayoutOption" BackgroundColor="Red" />
+        <Label x:Name="lblOrange"   WidthRequest="100" HeightRequest="100"
+               Text="Welcome to .NET MAUI!" BackgroundColor="Orange"/>
+            <Label x:Name="lblYellow"   
+               Text="Welcome to .NET MAUI!" BackgroundColor="Yellow" />
+            <Label x:Name="lblGreen"  
+               Text="Welcome to .NET MAUI!" BackgroundColor="Green" />
+            <Label x:Name="lblBlue"
+               Text="Welcome to .NET MAUI!" BackgroundColor="blue" />
+
+            <Label Text="Indigo" BackgroundColor="#4B0082" TextColor="White" />
+        <Label Text="Violet" BackgroundColor="#8A2BE2" TextColor="White" />
+        <Label Text="Pink" BackgroundColor="#FFC0CB" TextColor="Black" />
+        
     </StackLayout>
 </ContentPage>

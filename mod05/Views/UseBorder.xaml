@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.UseBorder"
+             Title="UseBorder">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Border Margin="10" Stroke="Blue" >
+                <Label  Text="Border，適用於 .NET MAUI 為控制項四圍繪製框線">
+                </Label>
+            </Border>
+
+            <Border Margin="10" Stroke="Blue" Padding="10" 
+StrokeThickness="3" 
+    StrokeShape="RoundRectangle 15,0,0,15">
+
+                <Label  Text="Border，適用於 .NET MAUI 為控制項四圍繪製框線">
+                </Label>
+            </Border>
+
+            <Border WidthRequest="380"  Margin="5" 
+Stroke="blue" StrokeThickness="3" StrokeShape="RoundRectangle 200,0,0,200 ">
+                <Border.Shadow >
+                    <Shadow Brush="lightgray" Offset="40,40" Opacity="0.5"></Shadow>
+                </Border.Shadow>
+                <Image Aspect="Fill"  Source="to_bali_cycle_path_1.jpg"></Image>
+            </Border>
+
+            <Border WidthRequest="400" HeightRequest="280" Margin="5" 
+    Stroke="blue" StrokeThickness="3"  Padding="0,0,38,36"
+StrokeShape="Polygon 20,70 190,0 360,70 340,240 40,240">
+                <Image Aspect="Fill"  Source="to_bali_cycle_path_1.jpg">
+                </Image>
+            </Border>
+            <Border WidthRequest="380" HeightRequest="250" Margin="5"   
+Stroke="blue" StrokeThickness="5" StrokeShape="Ellipse">
+                <Image Aspect="Fill" Source="to_bali_cycle_path_1.jpg">
+                </Image>
+            </Border>
+            <Border WidthRequest="300" HeightRequest="300" Margin="10"   
+Stroke="blue" StrokeThickness="5" StrokeShape="Ellipse">
+                <Image Aspect="Fill"  Source="to_bali_cycle_path_1.jpg">
+                </Image>
+            </Border>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

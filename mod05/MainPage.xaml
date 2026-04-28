@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Label Text="Hello, World!"   FontSize="32"
+                   HorizontalOptions="Center" />
+            <Label Text="預設中文字體" FontSize="32"
+                   HorizontalOptions="Center" />
+            <Label Text="Google字體 NotoSerifTC-ExtraBold"  FontSize="32" FontFamily="SerifEB"
+                   HorizontalOptions="Center" />
+            <Label Text="Google字體 NotoSerifTC-Black"  FontSize="32" FontFamily="SerifBk" 
+                   HorizontalOptions="Center" />
+            <Label Text="Google字體 NotoSerifTC-Regular" FontAttributes="Italic" 
+                   FontSize="32" FontFamily="SerifR" HorizontalOptions="Center" />
+            <Label Text="Google字體 ZenMaruGothic-Black"  FontSize="32" FontFamily="ZMGB" 
+                   HorizontalOptions="Center" />
+            <Label Text="Google字體 ZenMaruGothic-Regular" 
+                   FontSize="32" FontFamily="ZMGR" HorizontalOptions="Center" />
+            <Label Text="Google字體 RampartOne-Regular"  
+                   FontSize="32" FontFamily="ROR" HorizontalOptions="Center" />
+            <Label Text="&#xf0f3;" FontFamily="FA6FS" FontSize="20" HorizontalOptions="Center"></Label>
+            <Label Text="&#xf17a;" FontFamily="FA6BR" 
+                   FontSize="20"  HorizontalOptions="Center"></Label>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

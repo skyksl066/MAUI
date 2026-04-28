@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <GradientStopCollection x:Key="rainbowGS">
+        <GradientStop Color="Red" Offset="0.0" />
+        <GradientStop Color="Orange" Offset="0.25" />
+        <GradientStop Color="Yellow" Offset="0.5" />
+        <GradientStop Color="Green" Offset="0.75" />
+        <GradientStop Color="Blue" Offset="1.0" />
+    </GradientStopCollection>
+</ResourceDictionary>

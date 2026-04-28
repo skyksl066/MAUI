@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod06.Views.UseOtherEntry"
+             Title="UseOtherEntry">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="CheckBox" Padding="10"></Label>
+            <CheckBox x:Name="chk1" CheckedChanged="chk1_CheckedChanged"></CheckBox>
+            <Label x:Name="chkResult" Padding="10"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Switch" Padding="10"></Label>
+            <Switch x:Name="switch1" OnColor="BlueViolet" ThumbColor="Blue" 
+Toggled="switch1_Toggled">
+            </Switch>
+            <Label x:Name="switchResult" Padding="10"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Slider" Padding="10"></Label>
+            <Slider x:Name="slider1" WidthRequest="200" Minimum="5" Maximum="10"
+              ValueChanged="slider1_ValueChanged" 
+              DragStarted="slider1_DragStarted"  
+              DragCompleted="slider1_DragCompleted" >
+            </Slider>
+        </HorizontalStackLayout>
+        <Label x:Name="sliderResult" Padding="10" />
+        <Label x:Name="sliderAction" Padding="10" />
+        <HorizontalStackLayout>
+            <Label Text="Stepper" Padding="10"></Label>
+            <Stepper Minimum="1" Maximum="10" Increment="0.5" 
+     ValueChanged="Stepper_ValueChanged"></Stepper>
+            <Label x:Name="stepperResult" Padding="10"></Label>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

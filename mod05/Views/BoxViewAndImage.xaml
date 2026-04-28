@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.BoxViewAndImage"
+             Title="BoxViewAndImage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <BoxView Color="Red" WidthRequest="20" HeightRequest="20" CornerRadius="15,15,0,0" />
+            <BoxView Color="Orange" WidthRequest="30" HeightRequest="30" CornerRadius="15,15,0,0" />
+            <BoxView Color="Yellow" WidthRequest="40" HeightRequest="40" CornerRadius="50" />
+            <BoxView Color="Green" WidthRequest="50" HeightRequest="50" CornerRadius="30,0,0,30" />
+            <BoxView Color="Blue" WidthRequest="60" HeightRequest="60" CornerRadius="15"/>
+            <BoxView Color="Indigo" WidthRequest="70" HeightRequest="70" CornerRadius="15,15,0,0" />
+            <BoxView Color="Purple " WidthRequest="80" HeightRequest="80" />
+            <Image Aspect="AspectFit" BackgroundColor="Yellow"  
+           Source="https://raw.githubusercontent.com/anitaloggg/git/main/xiangshan_101.jpg">
+            </Image>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+</ContentPage>

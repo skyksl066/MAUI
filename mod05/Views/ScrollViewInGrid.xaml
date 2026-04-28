@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.ScrollViewInGrid"
+             Title="ScrollViewInGrid">
+    <Grid RowDefinitions="80,*, 40" BackgroundColor="Yellow">
+        <Label Text="往八里的腳踏車道"  FontSize="32" FontFamily="ROR"
+                HorizontalOptions="Center" />
+        <ScrollView BackgroundColor="GreenYellow" Grid.Row="1" >
+            <VerticalStackLayout>
+                <Image  Source="to_bali_cycle_path_1.jpg">
+                </Image>
+                <Image Source="to_bali_cycle_path_3.jpg">
+                </Image>
+                <Image Source="to_bali_cycle_path_2.jpg">
+                </Image>
+            </VerticalStackLayout>
+        </ScrollView>
+        <Label Text="攝於2023.3.9 -- Anita " FontSize="20" Grid.Row="2" 
+            HorizontalOptions="Center">
+        </Label>
+    </Grid>
+
+</ContentPage>

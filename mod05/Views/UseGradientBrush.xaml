@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.UseGradientBrush"
+             Title="UseGradientBrush">
+    <VerticalStackLayout>
+        <Label Text="線性漸層" FontSize="24"></Label>
+        <Grid RowDefinitions="150,150" ColumnDefinitions="1*,1*">
+            <VerticalStackLayout>
+                <Label Text="由左上至右下的斜角"></Label>
+                <Border  HeightRequest="120"
+                    Stroke="Blue" Padding="10" StrokeThickness="3" >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1" >
+                            <GradientStop Color="Red" Offset="0.0"  />
+                            <GradientStop Color="Orange" Offset="0.25" />
+                            <GradientStop Color="Yellow" Offset="0.5" />
+                            <GradientStop Color="Green" Offset="0.75" />
+                            <GradientStop Color="Blue" Offset="1.0" />
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <Label Text="由右上至左下的斜角"></Label>
+                <Border  HeightRequest="120"
+          Stroke="Blue" Padding="10" StrokeThickness="3" >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="0,1" 
+                                GradientStops="{x:StaticResource rainbowGS }" >
+                        </LinearGradientBrush>
+                    </Border.Background>
+                </Border>
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1">
+                <Label Text="由上到下"></Label>
+                <Border  HeightRequest="120"
+           Stroke="Blue" Padding="10" StrokeThickness="3" >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="1,0" EndPoint="1,1" 
+                     GradientStops="{x:StaticResource rainbowGS }" />
+                    </Border.Background>
+                </Border>
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                <Label Text="由左到右"></Label>
+                <Border  HeightRequest="120"
+            Stroke="Blue" Padding="10" StrokeThickness="3" >
+                    <Border.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" 
+                               GradientStops="{x:StaticResource rainbowGS }" />
+                    </Border.Background>
+                </Border>
+
+            </VerticalStackLayout>
+        </Grid>
+        <VerticalStackLayout>
+            <Label Text="放射漸層" FontSize="24"></Label>
+            <Grid RowDefinitions="150,150" ColumnDefinitions="1*,1*">
+                <VerticalStackLayout>
+                    <Label Text="正中央"></Label>
+                    <Border  HeightRequest="120"
+           Stroke="Blue" Padding="10" StrokeThickness="3" >
+                        <Border.Background>
+                            <RadialGradientBrush GradientStops="{x:StaticResource rainbowGS }"/>
+                        </Border.Background>
+                    </Border>
+
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="Radius 小"></Label>
+                    <Border  HeightRequest="120"
+            Stroke="Blue" Padding="10" StrokeThickness="3" >
+                        <Border.Background>
+                            <RadialGradientBrush Radius="0.3" 
+    GradientStops="{x:StaticResource rainbowGS }"/>
+                        </Border.Background>
+                    </Border>
+
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="1">
+                    <Label Text="中心點向左上偏移"></Label>
+                    <Border  HeightRequest="120"
+           Stroke="Blue" Padding="10" StrokeThickness="3" >
+                        <Border.Background>
+                            <RadialGradientBrush Center="0.3, 0.3" 
+                     GradientStops="{x:StaticResource rainbowGS }"/>
+                        </Border.Background>
+                    </Border>
+
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="1" Grid.Column="1">
+                    <Label Text="Radius 大"></Label>
+                    <Border  HeightRequest="120"
+            Stroke="Blue" Padding="10" StrokeThickness="3" >
+                        <Border.Background>
+                            <RadialGradientBrush Center="0.3, 0.3" Radius=".8" 
+                      GradientStops="{x:StaticResource rainbowGS }"/>
+                        </Border.Background>
+                    </Border>
+
+                </VerticalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+
+</ContentPage>

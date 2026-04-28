@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod04.Views.GridPage"
+             Title="Calculator" MinimumWidthRequest="200">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="2"></Setter>
+        </Style>
+    </ContentPage.Resources>
+    <!-- 計算機排版：顯示區與按鍵格線 -->
+    <Grid BackgroundColor="LightGray"
+          RowDefinitions="80,60,60,60,60,60"
+          ColumnDefinitions="*,*,*,*"
+          Padding="10">
+
+        <!-- 顯示區：使用 Frame 以獲得圓角 -->
+        <Border Grid.Row="0" Grid.ColumnSpan="4"
+                BackgroundColor="White"
+                Shadow="False"
+                Padding="10">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="6" />
+            </Border.StrokeShape>
+            <Label Text="0"
+                   FontSize="36"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center"
+                   BackgroundColor="Transparent" /> 
+        </Border>
+
+        <!-- 第一列按鍵 -->
+        <Button Grid.Row="1" Grid.Column="0" Text="C" BackgroundColor="#E0E0E0" FontSize="20" />
+        <Button Grid.Row="1" Grid.Column="1" Text="±" BackgroundColor="#E0E0E0" FontSize="20" />
+        <Button Grid.Row="1" Grid.Column="2" Text="%" BackgroundColor="#E0E0E0" FontSize="20" />
+        <Button Grid.Row="1" Grid.Column="3" Text="÷" BackgroundColor="#FF9500" TextColor="White" FontSize="20" />
+
+        <!-- 第二列按鍵 -->
+        <Button Grid.Row="2" Grid.Column="0" Text="7" FontSize="20" />
+        <Button Grid.Row="2" Grid.Column="1" Text="8" FontSize="20" />
+        <Button Grid.Row="2" Grid.Column="2" Text="9" FontSize="20" />
+        <Button Grid.Row="2" Grid.Column="3" Text="×" BackgroundColor="#FF9500" TextColor="White" FontSize="20" />
+
+        <!-- 第三列按鍵 -->
+        <Button Grid.Row="3" Grid.Column="0" Text="4" FontSize="20" />
+        <Button Grid.Row="3" Grid.Column="1" Text="5" FontSize="20" />
+        <Button Grid.Row="3" Grid.Column="2" Text="6" FontSize="20" />
+        <Button Grid.Row="3" Grid.Column="3" Text="-" BackgroundColor="#FF9500" TextColor="White" FontSize="20" />
+
+        <!-- 第四列按鍵 -->
+        <Button Grid.Row="4" Grid.Column="0" Text="1" FontSize="20" />
+        <Button Grid.Row="4" Grid.Column="1" Text="2" FontSize="20" />
+        <Button Grid.Row="4" Grid.Column="2" Text="3" FontSize="20" />
+        <Button Grid.Row="4" Grid.Column="3" Text="+" BackgroundColor="#FF9500" TextColor="White" FontSize="20" />
+
+        <!-- 第五列按鍵（0 佔兩格） -->
+        <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="0" FontSize="20" />
+        <Button Grid.Row="5" Grid.Column="2" Text="." FontSize="20" />
+        <Button Grid.Row="5" Grid.Column="3" Text="=" BackgroundColor="#FF9500" TextColor="White" FontSize="20" />
+
+    </Grid>
+</ContentPage>

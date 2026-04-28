@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.UseBorderWithLineJoin"
+             Title="UseBorderWithLineJoin">
+    <VerticalStackLayout>
+        <Border WidthRequest="380" Margin="10" Padding="15" 
+    Stroke="blue" StrokeThickness="10" >
+            <Label FontSize="24" FontFamily="ZMGB" Text="四角的樣式Meter (Default)" />
+        </Border>
+        <Border WidthRequest="380" Margin="10" Padding="15" 
+    Stroke="blue" StrokeThickness="10" StrokeLineJoin="Bevel" >
+            <Label FontSize="40" FontFamily="ZMGB" Text="四角的樣式Bevel" />
+        </Border>
+        <Border WidthRequest="380" Margin="10" Padding="15" 
+    Stroke="blue" StrokeThickness="10" StrokeLineJoin="Round" >
+            <Label FontSize="40" FontFamily="ZMGB" Text="四角的樣式Round"  />
+        </Border>
+
+    </VerticalStackLayout>
+</ContentPage>

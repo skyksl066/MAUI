@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod06.Views.UseButton"
+             Title="UseButton">
+    <ContentPage.Resources>
+        <Style x:Key="BrandsButton" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Orange"></Setter>
+            <Setter Property="TextColor" Value="Black"></Setter>
+            <Setter Property="WidthRequest" Value="50"></Setter>
+            <Setter Property="CornerRadius" Value="50"></Setter>
+            <Setter Property="FontFamily" Value="FA6BR"></Setter>
+            <Setter Property="FontSize" Value="20"></Setter>
+        </Style>
+    </ContentPage.Resources>
+
+
+
+    <VerticalStackLayout>
+        <Button Text="Click me" Background="Red" TextColor="Yellow" 
+           Clicked="Button_Clicked" Pressed="Button_Pressed" Released="Button_Released">
+        </Button>
+        <Label Text="按鈕回應:"></Label>
+        <Label x:Name="Label1"></Label>
+        <Label x:Name="Label2"></Label>
+        <Label x:Name="Label3"></Label>
+        <HorizontalStackLayout>
+            <Button Style="{x:StaticResource BrandsButton}"
+         Text="&#xf1a0;" ></Button>
+            <Button Style="{x:StaticResource BrandsButton}" Text="&#xf09a;" ></Button>
+            <Button Style="{x:StaticResource BrandsButton}" Text="&#xf3ca;" ></Button>
+
+        </HorizontalStackLayout>
+
+        <ImageButton x:Name="btnCafe"  Source="cup.png"  HeightRequest="80" 
+                      Clicked="btnCafe_ClickedAsync" >
+        </ImageButton>
+
+
+    </VerticalStackLayout>
+</ContentPage>

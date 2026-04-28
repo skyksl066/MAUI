@@ -3,11 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod04.Views.HStackLayoutPage"
              Title="HStackLayoutPage">
-    <HorizontalStackLayout>
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Red" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Orange"/>
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Yellow" />
-        <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Green" />
+    <HorizontalStackLayout Spacing="5">
+        <Label  Text="StartI!" BackgroundColor="Red" VerticalOptions="Start" />
+        <Label  Text="EndI!" BackgroundColor="Orange" VerticalOptions="End" />
+        <Label  Text="CenterI!" BackgroundColor="Yellow" VerticalOptions="Center"  />
+        <Label  Text="FillI!" BackgroundColor="Green" VerticalOptions="Fill" />
+
         <Label  Text="Welcome to .NET MAUI!" BackgroundColor="blue" />
         <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Indigo" />
         <Label  Text="Welcome to .NET MAUI!" BackgroundColor="Purple" />

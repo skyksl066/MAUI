@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod06.Views.UseLabel"
+             Title="UseLabel">
+    <VerticalStackLayout>
+        <Label Text="Welcome to .NET MAUI!" VerticalOptions="Center" 
+     HorizontalOptions="Center" />
+        <Label FontSize="24" HorizontalOptions="Center"  >
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="獨坐敬亭山 " TextColor="Blue " FontSize="36"
+FontAttributes="Bold"></Span>
+                    <Span Text="李白&#10;" TextColor="Blue"
+TextDecorations="Underline"></Span>
+                    <Span Text="眾鳥高飛盡， &#10;孤雲獨去閒。 &#10;" ></Span>
+                    <Span Text="相看兩相厭， &#10;只有敬亭山。 &#10;"
+TextDecorations="Strikethrough"></Span>
+                    <Span Text="相看兩不厭， &#10;只有敬亭山。 &#10;"
+FontAttributes="Bold" TextColor="Red"></Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+        <Label LineBreakMode="WordWrap"   Padding="20">
+            <Label.Text>
+                The Label class has a TextType property, which determines whether the Label object should display plain text, or HTML text. This property should be set to one of the members of the TextType enumeration:
+            </Label.Text>
+        </Label>
+        <Label LineBreakMode="HeadTruncation"  Padding="20">
+            <Label.Text>
+                The Label class has a TextType property, which determines whether the Label object should display plain text, or HTML text. This property should be set to one of the members of the TextType enumeration:
+            </Label.Text>
+        </Label>
+        <Label LineBreakMode="MiddleTruncation"  Padding="20">
+            <Label.Text>
+                The Label class has a TextType property, which determines whether the Label object should display plain text, or HTML text. This property should be set to one of the members of the TextType enumeration:
+            </Label.Text>
+        </Label>
+        <Label LineBreakMode="TailTruncation"  Padding="20">
+            <Label.Text>
+                The Label class has a TextType property, which determines whether the Label object should display plain text, or HTML text. This property should be set to one of the members of the TextType enumeration:
+            </Label.Text>
+        </Label>
+
+    </VerticalStackLayout>
+</ContentPage>

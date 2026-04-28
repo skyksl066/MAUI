@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod04.Views.FlexLayoutPage"
+             Title="FlexLayoutPage">
+    <FlexLayout Direction="Row"  Wrap="Wrap"  JustifyContent="SpaceBetween"  >
+        <Label Text="1" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" BackgroundColor="Red"  FlexLayout.Order="3"  />
+        <Label Text="2" WidthRequest="100" HeightRequest="100" 
+    FontSize="30"  BackgroundColor="Orange"  FlexLayout.Order="2"  />
+        <Label  Text="3" WidthRequest="100" HeightRequest="100"
+    FontSize="30" BackgroundColor="Yellow"  FlexLayout.Order="1"    />
+        <Label  Text="4" WidthRequest="100" HeightRequest="100"
+    FontSize="30" BackgroundColor="Green"  />
+        <Label  Text="5" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" BackgroundColor="blue" />
+        <Label  Text="6" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" BackgroundColor="Indigo" />
+        <Label  Text="7" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" BackgroundColor="Purple" />
+        <Label  Text="8" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" BackgroundColor="LightGray" />
+        <Label  Text="9" WidthRequest="100" HeightRequest="100" 
+    FontSize="30" TextColor="White" BackgroundColor="Black" />
+    </FlexLayout>
+
+</ContentPage>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod05.Views.SplashPage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#F0F4F8">
+    
+    <ContentPage.Resources>
+        <Style x:Key="CultureLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="40" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="FontFamily" Value="MINGLIU"/>
+        </Style>
+        <Style x:Key="SloganLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="120"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="TextColor" Value="#1A2A5E"/>
+            <Setter Property="HorizontalTextAlignment" Value="Start"/>
+            <Setter Property="FontFamily" Value="MINGLIU"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <AbsoluteLayout>
+        <!-- 背景圖 -->
+        <Image AbsoluteLayout.LayoutBounds="20, 50, 800, 800" Source="dotnet_bot.png" />
+
+        <!--左側企業文化欄-->
+        <Grid AbsoluteLayout.LayoutBounds="20, 0, 100, .45" 
+              AbsoluteLayout.LayoutFlags="HeightProportional" 
+              MaximumWidthRequest="80">
+
+            <!--背景圖-->
+            <Image Source="dotnet_bot.png" Aspect="AspectFill" />
+
+            <!--遮罩-->
+            <BoxView Color="#000000" Opacity="0.35" />
+
+            <!--企業文化垂直文字，每字一行-->
+            <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="End" Spacing="10" Margin="0,0,0,20">
+                <Label Text="企" Style="{StaticResource CultureLabel}"/>
+                <Label Text="業" Style="{StaticResource CultureLabel}"/>
+                <Label Text="文" Style="{StaticResource CultureLabel}"/>
+                <Label Text="化" Style="{StaticResource CultureLabel}"/>
+            </VerticalStackLayout>
+
+        </Grid>
+
+        <!--右側主要文字區塊-->
+        <Grid AbsoluteLayout.LayoutBounds="120, 0, AutoSize, 1"
+            AbsoluteLayout.LayoutFlags="HeightProportional"
+            RowDefinitions="*,*,*,*">
+            <Label Grid.Row="0" Text="紀律" Style="{StaticResource SloganLabel}" VerticalOptions="Center"/>
+            <Label Grid.Row="1" Text="效率" Style="{StaticResource SloganLabel}" VerticalOptions="Center"/>
+            <Label Grid.Row="2" Text="榮譽" Style="{StaticResource SloganLabel}" VerticalOptions="Center"/>
+            <Label Grid.Row="3" Text="使命" Style="{StaticResource SloganLabel}" VerticalOptions="Center"/>
+        </Grid>
+    </AbsoluteLayout>
+</ContentPage>
