@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod06.Views.UseOtherEntry"
-             Title="UseOtherEntry">
+             Title="Lab04: 更多設定值控制">
     <VerticalStackLayout>
         <HorizontalStackLayout>
             <Label Text="CheckBox" Padding="10"></Label>

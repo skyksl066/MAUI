@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod07.Views.Lab4SourceFromModel"
+             Title="Lab4SourceFromModel">
+    <VerticalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="ID" Margin="10"></Label>
+            <Label Text=""  Margin="10"></Label>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Name" Margin="10"></Label>
+            <Entry Text=""></Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="HireDate" Margin="10"></Label>
+            <DatePicker  ></DatePicker>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Salary" Margin="10"></Label>
+            <Entry   ></Entry>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

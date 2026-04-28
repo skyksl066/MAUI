@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod07.Views.BindWithControl"
+             Title="Lab01: 與另一個控制項Binding">
+    <VerticalStackLayout>
+        <BoxView Color="Red" Margin="20"
+            WidthRequest="{Binding Source={x:Reference widthSlider}, Path=Value}"
+            HeightRequest="{Binding Source={x:RelativeSource Self}, Path=WidthRequest}" 
+            CornerRadius="{Binding Source={x:Reference srcStepper}, Path=Value}"
+            BackgroundColor="Transparent">
+        </BoxView>
+        <HorizontalStackLayout HorizontalOptions="Center" >
+            <Label Text="{Binding Source={x:Reference srcStepper}, 
+                Path=Value, StringFormat='CornerRadius:  {0}'}" Margin="15"></Label>
+            <Stepper x:Name="srcStepper" Minimum="0" Maximum="30" Increment="5" ></Stepper>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout HorizontalOptions="Center" >
+            <Label Text="{Binding Source={x:Reference widthSlider}, 
+                Path=Value, StringFormat='Width: {0:F0}'}" Margin="5"></Label>
+            <Slider x:Name="widthSlider" Minimum="50" Maximum="200" WidthRequest="200" Value="50"></Slider>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

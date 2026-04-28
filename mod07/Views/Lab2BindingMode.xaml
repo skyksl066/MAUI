@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod07.Views.Lab2BindingMode"
+             Title="Lab2BindingMode">
+    <VerticalStackLayout>
+        <Label x:Name="label" Margin="10"
+        Text="{Binding Source={x:Reference srcEntry}, Path='Text' , StringFormat='Target:{0}'}" >
+        </Label>
+        <HorizontalStackLayout  >
+            <Label Text="Source: " Margin="10,10,0,0"></Label>
+            <Entry x:Name="srcEntry"  MaxLength="30" ClearButtonVisibility="WhileEditing" >
+            </Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="TwoWay:" Margin="10,10,0,0"></Label>
+            <Entry x:Name="tgEntry"   MaxLength="80" ClearButtonVisibility="WhileEditing"></Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout  >
+            <Label Text="OneWay:" Margin="10,10,0,0"></Label>
+            <Entry MaxLength="80" ClearButtonVisibility="WhileEditing"
+           Text="{Binding Source={x:Reference srcEntry}, Path='Text', Mode=OneWay}" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout  >
+            <Label Text="OneWayToSource:" Margin="10,10,0,0"></Label>
+            <Entry MaxLength="80" ClearButtonVisibility="WhileEditing">
+                <Entry.Text>
+                    <Binding Path="Text" Mode="OneWayToSource">
+                        <Binding.Source>
+                            <x:Reference>srcEntry</x:Reference>
+                        </Binding.Source>
+                    </Binding>
+                </Entry.Text>
+            </Entry>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout  >
+            <Label Text="OneTime:" Margin="10,10,0,0"></Label>
+            <Entry x:Name="tgOneTime"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -4,11 +4,25 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:mod07"
+    xmlns:views="clr-namespace:mod07.Views"
+    Shell.FlyoutBehavior="Flyout"
     Title="mod07">
 
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
+    <ShellContent
+        Title="Lab01: 與另一個控制項Binding"
+        ContentTemplate="{DataTemplate views:BindWithControl}"
+        Route="BindWithControl" />
+    <ShellContent
+        Title="Lab02: 使用 BindingMode"
+        ContentTemplate="{DataTemplate views:Lab2BindingMode}"
+        Route="Lab2BindingMode" />
+    <ShellContent
+        Title="Lab04: 繫結來源從Model"
+        ContentTemplate="{DataTemplate views:Lab4SourceFromModel}"
+        Route="Lab4SourceFromModel" />
 
 </Shell>

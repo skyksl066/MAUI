@@ -13,27 +13,27 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title="UseLabel"
+        Title="Lab01: 使用 Label"
         ContentTemplate="{DataTemplate views:UseLabel}"
         Route="UseLabel" />
     <ShellContent
-        Title="UseButton"
+        Title="Lab02: 使用按鈕"
         ContentTemplate="{DataTemplate views:UseButton}"
         Route="UseButton" />
     <ShellContent
-        Title="UseEditor"
+        Title="Lab03: 使用文字編輯控制項"
         ContentTemplate="{DataTemplate views:UseEditor}"
         Route="UseEditor" />
     <ShellContent
-        Title="UseOtherEntry"
+        Title="Lab04: 更多設定值控制"
         ContentTemplate="{DataTemplate views:UseOtherEntry}"
         Route="UseOtherEntry" />
     <ShellContent
-        Title="UseDateTimePicker"
+        Title="Lab05: 日期/時間 選擇器"
         ContentTemplate="{DataTemplate views:UseDateTimePicker}"
         Route="UseDateTimePicker" />
     <ShellContent
-        Title="UseActivity"
+        Title="Lab06: 表示活動進行中的控制項"
         ContentTemplate="{DataTemplate views:UseActivity}"
         Route="UseActivity" />
     
