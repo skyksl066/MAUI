@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod04.Views.StackLayoutPage"
-             Title="StackLayoutPage">
+             Title="Lab01-1: StackLayout">
     
         <StackLayout x:Name="stack1" Spacing="5" Orientation="Horizontal">
             <Button x:Name="btnChangeLayout" Clicked="btnChangeLayout_Clicked" 

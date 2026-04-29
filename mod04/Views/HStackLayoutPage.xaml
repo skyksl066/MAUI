@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod04.Views.HStackLayoutPage"
-             Title="HStackLayoutPage">
+             Title="Lab01-2: HStackLayout">
     <HorizontalStackLayout Spacing="5">
         <Label  Text="StartI!" BackgroundColor="Red" VerticalOptions="Start" />
         <Label  Text="EndI!" BackgroundColor="Orange" VerticalOptions="End" />

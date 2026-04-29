@@ -2,24 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod07.Views.Lab4SourceFromModel"
+             xmlns:m="clr-namespace:mod07.Models"
+             x:DataType="m:Employee"
              Title="Lab4SourceFromModel">
     <VerticalStackLayout>
         <HorizontalStackLayout>
             <Label Text="ID" Margin="10"></Label>
-            <Label Text=""  Margin="10"></Label>
+            <Label Text="{Binding Id}"  Margin="10"></Label>
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Name" Margin="10"></Label>
-            <Entry Text=""></Entry>
+            <Entry Text="{Binding Name}"></Entry>
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="HireDate" Margin="10"></Label>
-            <DatePicker  ></DatePicker>
+            <DatePicker Date="{Binding HireDate}" Format="yyyy-MM-dd"></DatePicker>
         </HorizontalStackLayout>
         <HorizontalStackLayout>
             <Label Text="Salary" Margin="10"></Label>
-            <Entry   ></Entry>
+            <Entry Text="{Binding Salary}" Keyboard="Numeric"></Entry>
         </HorizontalStackLayout>
-
+        <Button x:Name="showButton" Text="Show" Clicked="showButton_Clicked" Margin="10"></Button>
+        <Button x:Name="refreshButton" Text="Refresh" Clicked="refreshButton_Clicked" Margin="10"></Button>
     </VerticalStackLayout>
 </ContentPage>

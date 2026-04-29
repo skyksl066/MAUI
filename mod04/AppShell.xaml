@@ -13,27 +13,27 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title="HStackLayout"
-        ContentTemplate="{DataTemplate views:HStackLayoutPage}"
-        Route="HStackLayoutPage" />
-    <ShellContent
-        Title="StackLayout"
+        Title="Lab01-1: StackLayout"
         ContentTemplate="{DataTemplate views:StackLayoutPage}"
         Route="StackLayoutPage" />
     <ShellContent
-        Title="VStackLayout"
+        Title="Lab01-2: HStackLayout"
+        ContentTemplate="{DataTemplate views:HStackLayoutPage}"
+        Route="HStackLayoutPage" />
+    <ShellContent
+        Title="Lab01-3: VStackLayout"
         ContentTemplate="{DataTemplate views:VStackLayoutPage}"
         Route="VStackLayoutPage" />
     <ShellContent
-        Title="GridPage"
+        Title="Lab05: GridPage"
         ContentTemplate="{DataTemplate views:GridPage}"
         Route="GridPage" />
     <ShellContent
-        Title="FlexLayoutPage"
+        Title="Lab06: FlexLayoutPage"
         ContentTemplate="{DataTemplate views:FlexLayoutPage}"
         Route="FlexLayoutPage" />
     <ShellContent
-        Title="AbsoluteLayoutPage"
+        Title="Lab07: AbsoluteLayoutPage"
         ContentTemplate="{DataTemplate views:AbsoluteLayoutPage}"
         Route="AbsoluteLayoutPage" />
 

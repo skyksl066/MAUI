@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="mod08.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:mod08"
+    xmlns:views="clr-namespace:mod08.Views"
+    Shell.FlyoutBehavior="Flyout"
+    Title="mod08">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <ShellContent
+        Title="Lab01: MVVM 基礎"
+        ContentTemplate="{DataTemplate views:PetView}"
+        Route="PetView" />
+    <ShellContent
+        Title="Lab03: 使用 CommunityToolkit.Mvvm 套件"
+        ContentTemplate="{DataTemplate views:Lab03PetView}"
+        Route="Lab03PetView" />
+</Shell>

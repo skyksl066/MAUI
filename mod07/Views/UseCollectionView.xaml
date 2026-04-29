@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod07.Views.UseCollectionView"
+             xmlns:views="clr-namespace:mod07.Views"
+             xmlns:m="clr-namespace:mod07.Models"
+             x:DataType="views:UseCollectionView"
+             Title="UseCollectionView">
+    <VerticalStackLayout>
+        <Label Text="{Binding Pets.Count, StringFormat='目前筆數: {0}'}" HorizontalOptions="Center"/>
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button Text="Add Item" Margin="3" Clicked="addButton_Clicked"/>
+            <Button Text="Clear All" Margin="3" Clicked="clearButton_Clicked"/>
+        </HorizontalStackLayout>
+        
+        <ScrollView>
+            <CollectionView ItemsSource="{Binding Pets}"  Margin="5" HeightRequest="500">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                            <Border Margin="5">
+                                <Grid ColumnDefinitions="*,*" x:DataType="m:PetModel">
+                                    <Image Source="{Binding PictureUrl}"/>
+                                    <Grid Grid.Column="1" ColumnDefinitions="*,*" RowDefinitions="1.2*,*,*,*,*">
+                                        <Label Grid.ColumnSpan="2" FontSize="20" HorizontalOptions="Center">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} - {1}">
+                                                    <Binding Path="PetId"></Binding>
+                                                    <Binding Path="PetName"></Binding>
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+                                        <Label Grid.Row="1" Text="種類" Style="{x:StaticResource FieldLabel}"/>
+                                        <Label Grid.Row="1" Grid.Column="1"  Text="{Binding Type}"/>
+                                        <Label Grid.Row="2" Text="照片" Style="{x:StaticResource FieldLabel}"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding PictureUrl}"/>
+                                        <Label Grid.Row="3" Text="主人" Style="{x:StaticResource FieldLabel}"/>
+                                        <Label x:Name="ownerEntry" Grid.Row="3" Grid.Column="1" Text="{Binding Owner}"/>
+                                        <Label Grid.Row="4" Text="收養日期" Style="{x:StaticResource FieldLabel}"/>
+                                        <Label Grid.Row="4" Grid.Column="1" Text="{Binding AdopDate, StringFormat='{0:yyyy-MM-dd}'}"/>
+                                    </Grid>
+                                </Grid>
+                            </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+                <CollectionView.EmptyView>
+                    <ContentView>
+                        <VerticalStackLayout VerticalOptions="Center">
+                            <Label Text="目前沒有資料" FontSize="20" HorizontalTextAlignment="Center" ></Label>
+                        </VerticalStackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView>
+
+                <CollectionView.Footer>
+                    <ContentView>
+                        <Label Text="[Footer]" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
+                    </ContentView>
+                </CollectionView.Footer>
+                
+                <CollectionView.Header>
+                    <ContentView>
+                        <Label Text="Header" FontSize="20" HorizontalTextAlignment="Center" Background="LightBlue"></Label>
+                    </ContentView>
+                </CollectionView.Header>
+                
+            </CollectionView>
+        </ScrollView>
+
+    </VerticalStackLayout>
+</ContentPage>

@@ -24,5 +24,13 @@
         Title="Lab04: 繫結來源從Model"
         ContentTemplate="{DataTemplate views:Lab4SourceFromModel}"
         Route="Lab4SourceFromModel" />
-
+    <ShellContent
+        Title="Lab06: 使用 Picker"
+        ContentTemplate="{DataTemplate views:UsePicker}"
+        Route="UsePicker" />
+    <ShellContent
+        Title="Lab08: 使用 CollectionView"
+        ContentTemplate="{DataTemplate views:UseCollectionView}"
+        Route="UseCollectionView" />
+    
 </Shell>

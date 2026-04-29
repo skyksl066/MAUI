@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod05.Views.BoxViewAndImage"
-             Title="BoxViewAndImage">
+             Title="Lab02: 使用BoxView 和 Image">
     <ScrollView>
         <VerticalStackLayout>
             <BoxView Color="Red" WidthRequest="20" HeightRequest="20" CornerRadius="15,15,0,0" />

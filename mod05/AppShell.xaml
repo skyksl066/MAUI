@@ -10,31 +10,31 @@
 
     <TabBar>
         <ShellContent
-             Title="Home"
+             Title="Lab01: 字型"
              ContentTemplate="{DataTemplate local:MainPage}"
              Route="MainPage" />
         <ShellContent
-             Title="BoxViewAndImage"
+             Title="Lab02: 使用BoxView 和 Image"
              ContentTemplate="{DataTemplate views:BoxViewAndImage}"
              Route="BoxViewAndImage" />
         <ShellContent
-            Title="ScrollViewInGrid"
+            Title="Lab03: 使用ScrollViewInGrid"
             ContentTemplate="{DataTemplate views:ScrollViewInGrid}"
             Route="ScrollViewInGrid" />
         <ShellContent
-            Title="UseBorder"
+            Title="Lab04: 使用Border"
             ContentTemplate="{DataTemplate views:UseBorder}"
             Route="UseBorder" />
         <ShellContent
-            Title="UseBorderWithLineJoin"
+            Title="Lab05: 使用BorderWithLineJoin"
             ContentTemplate="{DataTemplate views:UseBorderWithLineJoin}"
             Route="UseBorderWithLineJoin" />
         <ShellContent
-            Title="UseBorderWithDash"
+            Title="Lab06: 使用BorderWithDash"
             ContentTemplate="{DataTemplate views:UseBorderWithDash}"
             Route="UseBorderWithDash" />
         <ShellContent
-            Title="UseGradientBrush"
+            Title="Lab08: 使用GradientBrush"
             ContentTemplate="{DataTemplate views:UseGradientBrush}"
             Route="UseGradientBrush" />
         <ShellContent

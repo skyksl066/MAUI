@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="mod05.Views.ScrollViewInGrid"
-             Title="ScrollViewInGrid">
+             Title="Lab03: 使用ScrollViewInGrid">
     <Grid RowDefinitions="80,*, 40" BackgroundColor="Yellow">
         <Label Text="往八里的腳踏車道"  FontSize="32" FontFamily="ROR"
                 HorizontalOptions="Center" />
