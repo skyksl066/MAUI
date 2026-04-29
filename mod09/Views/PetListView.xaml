@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod09.Views.PetListView"
+             xmlns:vm="clr-namespace:mod09.ViewModels"
+             xmlns:m="clr-namespace:mod09.Models"
+             x:DataType="vm:PetListViewModel"
+             x:Name="this"
+             Title="{Binding Title}">
+
+    <Grid ColumnDefinitions="*,*"
+        ColumnSpacing="5"
+        RowDefinitions="auto, *"
+        RowSpacing="0">
+        <Button Text="新增" Command="{Binding AddCommand}" Margin="5"></Button>
+        <CollectionView ItemsSource="{Binding PetList}"   
+                        EmptyView="沒有資料可顯示"
+                        SelectionMode="None" Grid.Row="1" Grid.ColumnSpan="2">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border x:DataType="m:PetModel">
+                        <VerticalStackLayout>
+                            <Image Source="{Binding PictureUrl}" HeightRequest="150" ></Image>
+                            <HorizontalStackLayout BackgroundColor="Pink" HorizontalOptions="Center">
+                                <Label  FontSize="24" VerticalOptions="Center"  >
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="PetId"></Binding>
+                                            <Binding Path="PetName"></Binding>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </HorizontalStackLayout>
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid >
+
+</ContentPage>

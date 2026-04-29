@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod09.Views.TimeView"
+             Title="TimeView">
+    <VerticalStackLayout>
+        <Label FontSize="32"
+            Text="{Binding Time ,StringFormat='最後進入時刻: {0:T}'}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Change Image" Clicked="Button_Clicked" ></Button>
+        <Image x:Name="img" Source="cat1.jpg" WidthRequest="450"></Image>
+
+    </VerticalStackLayout>
+</ContentPage>

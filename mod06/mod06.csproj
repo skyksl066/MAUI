@@ -51,9 +51,12 @@
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Include="..\shared\Resources\Images\dotnet_bot.png" Link="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
+		<MauiImage Include="..\shared\Resources\Images\cup.png" Link="Resources\Images\cup.png" />
 		
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
+		<MauiFont Include="..\shared\Resources\Fonts\OpenSansB\OpenSans-Regular.ttf" Link="Resources\Fonts\OpenSans-Regular.ttf" />
+		<MauiFont Include="..\shared\Resources\Fonts\OpenSansB\OpenSans-Semibold.ttf" Link="Resources\Fonts\OpenSans-Semibold.ttf" />
 		<MauiFont Include="..\shared\Resources\Fonts\FontAwesome\Font Awesome 6 Free-Regular-400.otf" Link="Resources\Fonts\Font Awesome 6 Free-Regular-400.otf" />
 		<MauiFont Include="..\shared\Resources\Fonts\FontAwesome\Font Awesome 6 Free-Solid-900.otf" Link="Resources\Fonts\Font Awesome 6 Free-Solid-900.otf" />
 		<MauiFont Include="..\shared\Resources\Fonts\FontAwesome\Font Awesome 6 Brands-Regular-400.otf" Link="Resources\Fonts\Font Awesome 6 Brands-Regular-400.otf" />

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="mod09.Views.PetView"
+             xmlns:vm="clr-namespace:mod09.ViewModels"
+             x:DataType="vm:PetViewModel"
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <Style TargetType="Label" x:Key="FieldLabel">
+            <Setter Property="Padding" Value="0,10, 10,0"></Setter>
+            <Setter Property="HorizontalOptions" Value="End"></Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout>
+        <Border Padding="15" WidthRequest="200" HeightRequest="200">
+            <Image Source="{Binding Pet.PictureUrl}"></Image>
+        </Border>
+
+        <Grid ColumnDefinitions="3*,7*" RowDefinitions="*,*,*,*,*,*,*" Padding="0,0,15,0" >
+            <Label Text="寵物代號"   Style="{x:StaticResource FieldLabel}"></Label>
+            <Entry Grid.Column="1" IsReadOnly="True" Text="{Binding Pet.PetId}"></Entry>
+
+            <Label Grid.Row="1" Text="名字"  Style="{x:StaticResource FieldLabel}"  ></Label>
+            <Entry Grid.Row="1" Grid.Column="1"  Text="{Binding Pet.PetName}"></Entry>
+            <!--<Entry x:Name="petNameEntry" Grid.Row="1" Grid.Column="1"  ></Entry>-->
+
+            <Label Grid.Row="2" Text="種類"  Style="{x:StaticResource FieldLabel}"  ></Label>
+            <Entry Grid.Row="2" Grid.Column="1"  Text="{Binding Pet.Type}"></Entry>
+
+            <Label Grid.Row="3" Text="照片"  Style="{x:StaticResource FieldLabel}"  ></Label>
+            <Entry Grid.Row="3" Grid.Column="1"  Text="{Binding Pet.PictureUrl}"></Entry>
+
+            <Label Grid.Row="4" Text="主人"  Style="{x:StaticResource FieldLabel}"  ></Label>
+            <Entry  x:Name="ownerEntry" Grid.Row="4" Grid.Column="1"  Text="{Binding Pet.Owner}"></Entry>
+
+            <Label Grid.Row="5" Text="收養日期"  Style="{x:StaticResource FieldLabel}"  ></Label>
+            <DatePicker x:Name="adopDatePicker" Grid.Row="5" Grid.Column="1" 
+                        Date="{Binding Pet.AdopDate}"
+                Format="yyyy-MM-dd"></DatePicker>
+
+            <Button x:Name="SaveButton" Grid.Row="6" Grid.ColumnSpan="2" 
+                      Text="存檔" HorizontalOptions="Center"
+                Command="{Binding SaveCommand}" 
+                    CommandParameter="{Binding Source={x:Reference ownerEntry }, Path=Text}"     ></Button>
+        </Grid>
+    </VerticalStackLayout>
+
+
+</ContentPage>
