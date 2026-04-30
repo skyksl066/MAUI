@@ -12,53 +12,55 @@
         ColumnSpacing="5"
         RowDefinitions="auto, *"
         RowSpacing="0">
-        <Button Text="新增" Command="{Binding AddCommand}" Margin="5"></Button>
-        <CollectionView ItemsSource="{Binding PetList}"   
+        <Button Text="新增" Command="{Binding AddCommand}" Margin="5"/>
+        <Button Text="更新" Command="{Binding GetPetsCommand}" Margin="5" Grid.Column="1"/>
+        <RefreshView Grid.Row="1" Grid.ColumnSpan="2" Command="{Binding GetPetsCommand}" IsRefreshing="{Binding IsRefreshing}" >
+            <CollectionView ItemsSource="{Binding PetList}"
                         EmptyView="沒有資料可顯示"
                         SelectionMode="None" Grid.Row="1" Grid.ColumnSpan="2">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Border x:DataType="m:PetModel">
-                        <VerticalStackLayout>
-                            <Image Source="{Binding PictureUrl}" HeightRequest="150">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer 
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border x:DataType="m:PetModel">
+                            <VerticalStackLayout>
+                                <Image Source="{Binding PictureUrl}" HeightRequest="150">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer 
                                         Command="{Binding Source={x:Reference this}, 
                                         Path=BindingContext.EditCommand}"
                                         CommandParameter="{Binding}"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                            <HorizontalStackLayout BackgroundColor="Pink" HorizontalOptions="Center">
-                                <Label  FontSize="24" VerticalOptions="Center"  >
-                                    <Label.Text>
-                                        <MultiBinding StringFormat="{}{0} - {1}">
-                                            <Binding Path="PetId"></Binding>
-                                            <Binding Path="PetName"></Binding>
-                                        </MultiBinding>
-                                    </Label.Text>
-                                </Label>
-                                <ImageButton Source="editforlight.png" Padding="10"
-                                    WidthRequest="20" HeightRequest="20"
-                                    Aspect="AspectFill"
-                                    Command="{Binding 
+                                    </Image.GestureRecognizers>
+                                </Image>
+                                <HorizontalStackLayout BackgroundColor="Pink" HorizontalOptions="Center">
+                                    <Label  FontSize="24" VerticalOptions="Center"  >
+                                        <Label.Text>
+                                            <MultiBinding StringFormat="{}{0} - {1}">
+                                                <Binding Path="PetId"></Binding>
+                                                <Binding Path="PetName"></Binding>
+                                            </MultiBinding>
+                                        </Label.Text>
+                                    </Label>
+                                    <ImageButton Source="editforlight.png" Padding="10"
+                                        WidthRequest="20" HeightRequest="20"
+                                        Aspect="AspectFill"
+                                        Command="{Binding 
                                        Source={x:RelativeSource AncestorType={x:Type vm:PetListViewModel}} , 
                                        Path=EditCommand}"
-                                    CommandParameter="{Binding .}">
-                                </ImageButton>
-                                <ImageButton Source="delete3d.png" Padding="10"
-                                    WidthRequest="20" HeightRequest="20"
-                                    Aspect="AspectFill"
-                                    Command="{Binding 
+                                        CommandParameter="{Binding .}">
+                                    </ImageButton>
+                                    <ImageButton Source="delete3d.png" Padding="10"
+                                        WidthRequest="20" HeightRequest="20"
+                                        Aspect="AspectFill"
+                                        Command="{Binding 
                                         Source={x:RelativeSource AncestorType={x:Type vm:PetListViewModel}} , 
                                         Path=DeleteCommand}"
-                                    CommandParameter="{Binding .}">    
-                                </ImageButton>
-                            </HorizontalStackLayout>
-                        </VerticalStackLayout>
-                    </Border>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </Grid >
-
+                                        CommandParameter="{Binding .}">
+                                    </ImageButton>
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </Grid>
 </ContentPage>

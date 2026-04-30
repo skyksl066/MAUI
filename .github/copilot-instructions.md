@@ -2,7 +2,7 @@
 
 ## 📚 Learning Project Overview
 
-.NET MAUI learning project with 7 modules:
+.NET MAUI learning project — 12 chapters planned (10 implemented, 2 reserved):
 
 - **mod01**: 認識 MAUI
 - **mod02**: MAUI 進入點 / XAML
@@ -11,17 +11,22 @@
 - **mod05**: 常用控制項
 - **mod06**: 輸入控制項
 - **mod07**: 資料 Binding
+- **mod08**: MVVM與資料 Binding
+- **mod09**: 注入與MVVMS
+- **mod10**: WebAPI 與 EFCore
+- **mod11**: 使用 HttpClient 存取 Web API
+- **mod12**: 部署
 
-**Stack**: .NET 9.0, Android/iOS/macOS/Windows, Single Project architecture
+**Stack**: .NET 9.0 (mod10: .NET 8.0), Android/iOS/macOS/Windows, Single Project architecture
 
 ## Build and Run Commands
 
-```bash
+```powershell
 # Build
-dotnet build mod04/mod04.csproj
+dotnet build .\mod04\mod04.csproj
 
 # Run on Windows
-dotnet run --project mod04/mod04.csproj -f net9.0-windows10.0.19041.0
+dotnet run --project .\mod04\mod04.csproj -f net9.0-windows10.0.19041.0
 ```
 
 ## Project Structure
@@ -69,8 +74,8 @@ public partial class MyPage : ContentPage
 - Device idiom: `{OnIdiom Default='...', Tablet='...', Phone='...'}`
 
 ### Resources
-- Fonts: `Resources/Fonts/*` (register in `MauiProgram.cs`)
-- Images: `Resources/Images/*`
+- Fonts: `Resources/Fonts/*` (register in `MauiProgram.cs`). 注意：部分模組使用 `shared\\Resources\\Fonts\\` 下的字型，透過 csproj 的 Link 引入。
+- Images: `Resources/Images/*`（模組可能會從 `shared\\Resources\\Images\\` link 圖片）
 - Icons/Splash: `Resources/AppIcon/appicon.svg`, `Resources/Splash/splash.svg`
 
 ### .NET 9.0 Features
