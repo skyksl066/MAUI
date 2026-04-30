@@ -20,7 +20,14 @@
                 <DataTemplate>
                     <Border x:DataType="m:PetModel">
                         <VerticalStackLayout>
-                            <Image Source="{Binding PictureUrl}" HeightRequest="150" ></Image>
+                            <Image Source="{Binding PictureUrl}" HeightRequest="150">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                        Command="{Binding Source={x:Reference this}, 
+                                        Path=BindingContext.EditCommand}"
+                                        CommandParameter="{Binding}"/>
+                                </Image.GestureRecognizers>
+                            </Image>
                             <HorizontalStackLayout BackgroundColor="Pink" HorizontalOptions="Center">
                                 <Label  FontSize="24" VerticalOptions="Center"  >
                                     <Label.Text>
@@ -30,6 +37,22 @@
                                         </MultiBinding>
                                     </Label.Text>
                                 </Label>
+                                <ImageButton Source="editforlight.png" Padding="10"
+                                    WidthRequest="20" HeightRequest="20"
+                                    Aspect="AspectFill"
+                                    Command="{Binding 
+                                       Source={x:RelativeSource AncestorType={x:Type vm:PetListViewModel}} , 
+                                       Path=EditCommand}"
+                                    CommandParameter="{Binding .}">
+                                </ImageButton>
+                                <ImageButton Source="delete3d.png" Padding="10"
+                                    WidthRequest="20" HeightRequest="20"
+                                    Aspect="AspectFill"
+                                    Command="{Binding 
+                                        Source={x:RelativeSource AncestorType={x:Type vm:PetListViewModel}} , 
+                                        Path=DeleteCommand}"
+                                    CommandParameter="{Binding .}">    
+                                </ImageButton>
                             </HorizontalStackLayout>
                         </VerticalStackLayout>
                     </Border>

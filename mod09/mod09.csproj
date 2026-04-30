@@ -62,7 +62,9 @@
 		<MauiImage Include="..\shared\Resources\Images\hamster2.jpg" Link="Resources\Images\hamster2.jpg" />
 		<MauiImage Include="..\shared\Resources\Images\hamster3.jpg" Link="Resources\Images\hamster3.jpg" />
 		<MauiImage Include="..\shared\Resources\Images\parrot.jpg" Link="Resources\Images\parrot.jpg" />
-		
+		<MauiImage Include="..\shared\Resources\Images\editforlight.png" Link="Resources\Images\editforlight.png" />
+		<MauiImage Include="..\shared\Resources\Images\delete3d.png" Link="Resources\Images\delete3d.png" />
+
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
 		<MauiFont Include="..\shared\Resources\Fonts\OpenSansB\OpenSans-Regular.ttf" Link="Resources\Fonts\OpenSans-Regular.ttf" />

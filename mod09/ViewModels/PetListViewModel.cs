@@ -39,5 +39,27 @@ namespace mod09.ViewModels
             }
             IsRefreshing = false;
         }
+
+        [RelayCommand]
+        public async void Edit(PetModel pet)
+        {
+            var param = new Dictionary<string, object>();
+            param.Add("edit", pet);
+            await AppShell.Current.GoToAsync(nameof(PetView), param);
+        }
+
+        [RelayCommand]
+        public async void Delete(PetModel pet)
+        {
+            IsRefreshing = true;
+            var alert = await AppShell.Current.DisplayAlert("刪除: ", $"是否刪除 {pet}", "確定", "取消");
+            if (alert)
+            {
+                var result = await _petService.DeletePetAsync(pet);
+                if (result > 0)
+                    await this.GetPetsAsync();
+            }
+            IsRefreshing = false;
+        }
     }
 }

@@ -5,7 +5,7 @@ using mod09.Services;
 
 namespace mod09.ViewModels;
 
-[QueryProperty(nameof(Pet), "Pet")]
+[QueryProperty(nameof(Pet), "edit")]
 public partial class PetViewModel : ViewModelBase
 {
     [ObservableProperty]
